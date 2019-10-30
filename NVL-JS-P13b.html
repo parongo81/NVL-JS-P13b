@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8">
+	<title>Funcion Palíndromo</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var palindromo= prompt("COMPROBEMOS SI ES UN PALINDROMO");
+		function esUnPalindromo (texto){
+			var intro = palindromo;
+			var sinAcentos = intro.replace(/ /g, "").toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"");
+			
+			var invertida = sinAcentos.split("").reverse().join("");
+			console.log(sinAcentos);
+			console.log(invertida);
+			if(sinAcentos === invertida){
+					alert("EL TEXTO -" + intro + "- SI ES UN PALINDROMO")
+				}else{
+					alert("EL TEXTO -" + intro + " NO ES UN PALINDROMO")
+				}
+		}
+		esUnPalindromo(palindromo)
+	</script>
+
+</body>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+
+
